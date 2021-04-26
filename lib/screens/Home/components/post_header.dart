@@ -27,7 +27,9 @@ class PostHeader extends StatelessWidget {
             ],
           ),
         ),
-        BasicIcon(Icons.control_point_sharp)
+        Spacer(),
+        BasicIcon(Icons.star),
+        BasicIcon(Icons.more_horiz_rounded)
       ],
     );
   }
