@@ -45,14 +45,21 @@ class Post extends StatelessWidget {
           Text(
             'Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.',
           ),
-          Image.network(
-            // TODO: Copy an image in assets to put here
-            'https://www.port.ac.uk/-/media/images/news-events-and-blogs/news/2019/july/puppy-dog-eyes-muscles-600x400.jpg',
-            fit: BoxFit.cover,
-            height: 100,
-            width: 100,
+          Card(
+            margin: EdgeInsets.only(bottom: 10, top: 10),
+            // TODO: fix this rounded border
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Image(
+              image: AssetImage(
+                'assets/images/post_dog.jpg',
+              ),
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
           ),
-        ],  
+        ],
       ),
     );
   }
