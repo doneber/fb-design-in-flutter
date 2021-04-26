@@ -9,13 +9,15 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Header(),
-          MyState(),
-          StoriesContainer(),
-          Post(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(),
+            MyState(),
+            StoriesContainer(),
+            Post(),
+          ],
+        ),
       ),
     );
   }
