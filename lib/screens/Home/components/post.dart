@@ -1,6 +1,10 @@
+import 'package:fb_design/screens/Home/components/Commend.dart';
 import 'package:fb_design/screens/Home/components/my_state.dart';
+import 'package:fb_design/screens/Home/components/post_foot.dart';
+import 'package:fb_design/screens/Home/components/post_header.dart';
 import 'package:fb_design/screens/widgets/basic-icon.dart';
 import 'package:fb_design/screens/widgets/image_profile.dart';
+import 'package:fb_design/screens/widgets/reaction-icon.dart';
 import 'package:flutter/material.dart';
 
 class Post extends StatelessWidget {
@@ -17,31 +21,7 @@ class Post extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              ImageProfile('assets/images/45.png', 40),
-              Container(
-                margin: EdgeInsets.only(left: 10, right: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Danieal Fernández Ramoz',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'Hace 3 dias',
-                      style: TextStyle(color: Colors.grey),
-                      textAlign: TextAlign.start,
-                    )
-                  ],
-                ),
-              ),
-              BasicIcon(Icons.control_point_sharp)
-            ],
-          ),
+          PostHeader(),
           Text(
             'Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.',
           ),
@@ -59,6 +39,8 @@ class Post extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          PostFoot(),
+          Commend(),
         ],
       ),
     );
