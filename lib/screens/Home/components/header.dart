@@ -42,6 +42,7 @@ class Header extends StatelessWidget {
               BasicIcon(Icons.messenger),
               ImageProfile(
                 'assets/images/45.png',
+                34
               ),
             ],
           )

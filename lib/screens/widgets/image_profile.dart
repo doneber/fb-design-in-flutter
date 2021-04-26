@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 class ImageProfile extends StatelessWidget {
   String srcImage;
-  ImageProfile(this.srcImage);
+  double lenght;
+  ImageProfile(this.srcImage, this.lenght);
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(5),
-      width: 34,
-      height: 34,
+      width: this.lenght,
+      height: this.lenght,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.white,
