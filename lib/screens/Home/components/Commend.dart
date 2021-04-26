@@ -7,23 +7,29 @@ class Commend extends StatelessWidget {
     return Container(
       child: Column(
         children: [
+          SizedBox(height: 5),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ImageProfile('assets/images/45.png', 33),
+              SizedBox(width: 5),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Danieal Fernández',
                     style: TextStyle(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
+                  SizedBox(height: 5),
                   Text(
                     'Lorem ipsum dolor cuantom magic.',
-                    style: TextStyle(color: Colors.grey),
-                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
+                  SizedBox(height: 6),
                   Row(
                     children: [
                       Text('Me gusta'),
