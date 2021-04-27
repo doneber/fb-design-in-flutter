@@ -1,16 +1,19 @@
 # fb_design
 
-A new Flutter project.
+Este proyecto solo es un intento de maquentación en **Flutter** del [diseño de facebook](https://dribbble.com/shots/15479224-Facebook-Redesign-Concept/attachments/7253134?mode=media) como reto de propuesto por los chicos de _We Devs_
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+    <tr>
+    <td>
+        <img src="Screen.png" style="width:300px;"></img>
+    </td>
+    <td>
+        <p>
+        El resultado por ahora es el que vez a la izq.<br>
+        En este caso elegimos el modo dark<br>
+        Existen muchas cosas por mejorar<br>
+        La funcionalidad aún es un misterio<br>
+        </p>
+    </td>
+    </tr>
+</table>
