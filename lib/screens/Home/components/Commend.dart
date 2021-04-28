@@ -32,9 +32,20 @@ class Commend extends StatelessWidget {
                   SizedBox(height: 6),
                   Row(
                     children: [
-                      Text('Me gusta'),
-                      SizedBox(width: 30),
-                      Text('Responder'),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: Text('Me gusta'),
+                        style: OutlinedButton.styleFrom(
+                          primary: Color(0xff1977F3),
+                        ),
+                      ),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: Text('Responder'),
+                        style: OutlinedButton.styleFrom(
+                          primary: Color(0xff1977F3),
+                        ),
+                      ),
                     ],
                   )
                 ],
