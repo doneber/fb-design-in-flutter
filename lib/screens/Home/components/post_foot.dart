@@ -14,11 +14,11 @@ class PostFoot extends StatelessWidget {
         ),
         Row(
           children: [
-            BasicIcon(Icons.thumb_up),
+            BasicIcon(Icons.thumb_up,18),
             SizedBox(width: 10),
-            BasicIcon(Icons.messenger_rounded),
+            BasicIcon(Icons.messenger_rounded,18),
             SizedBox(width: 10),
-            BasicIcon(Icons.subdirectory_arrow_right_rounded),
+            BasicIcon(Icons.subdirectory_arrow_right_rounded,18),
             Spacer(),
             Text(
               'Mao Lop y 50 personas más',

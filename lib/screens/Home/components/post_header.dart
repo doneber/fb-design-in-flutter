@@ -28,8 +28,8 @@ class PostHeader extends StatelessWidget {
           ),
         ),
         Spacer(),
-        BasicIcon(Icons.star),
-        BasicIcon(Icons.more_horiz_rounded)
+        BasicIcon(Icons.star, 14.5),
+        BasicIcon(Icons.more_horiz_rounded, 14.5),
       ],
     );
   }

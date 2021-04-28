@@ -32,9 +32,9 @@ class Header extends StatelessWidget {
         children: [
           facebookLogo,
           Spacer(),
-          BasicIcon(Icons.search_rounded),
+          BasicIcon(Icons.search_rounded,24),
           IconPoint(Icons.notifications_rounded),
-          BasicIcon(Icons.messenger),
+          BasicIcon(Icons.messenger,24),
           ImageProfile('assets/images/45.png', 34)
         ],
       ),
