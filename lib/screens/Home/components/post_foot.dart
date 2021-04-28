@@ -21,8 +21,8 @@ class PostFoot extends StatelessWidget {
             BasicIcon(Icons.subdirectory_arrow_right_rounded,18),
             Spacer(),
             Text(
-              'Mao Lop y 50 personas más',
-              style: TextStyle(color: Colors.grey),
+              'Mao Lop y 50 personas',
+              style: TextStyle(color: Colors.grey, fontSize: 13),
             ),
             SizedBox(width: 10),
             Row(
