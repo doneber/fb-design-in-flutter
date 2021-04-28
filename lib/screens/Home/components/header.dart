@@ -28,24 +28,14 @@ class Header extends StatelessWidget {
       color: Color(0xff232935),
       padding: EdgeInsets.all(10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              facebookLogo,
-            ],
-          ),
-          Row(
-            children: [
-              BasicIcon(Icons.search_rounded),
-              IconPoint(Icons.notifications_rounded),
-              BasicIcon(Icons.messenger),
-              ImageProfile(
-                'assets/images/45.png',
-                34
-              ),
-            ],
-          )
+          facebookLogo,
+          Spacer(),
+          BasicIcon(Icons.search_rounded),
+          IconPoint(Icons.notifications_rounded),
+          BasicIcon(Icons.messenger),
+          ImageProfile('assets/images/45.png', 34)
         ],
       ),
     );
