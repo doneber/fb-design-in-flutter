@@ -6,75 +6,102 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget header = Container(
-        margin: EdgeInsets.symmetric(horizontal: 27),
         child: Column(
-          children: [
-            SizedBox(height: 55),
-            ImageProfile('assets/images/my_photo.jpg', 120),
-            Text(
-              'Eber Ed',
-              style: TextStyle(
-                fontSize: 30,
+      children: [
+        Stack(children: [
+          Column(
+            children: [
+              Image.asset(
+                'assets/images/my_photo.jpg',
+                fit: BoxFit.cover,
+                height: 200,
+                width: double.infinity,
+              ),
+              Container(
+                color: Color(0xff080E1D),
+                width: double.infinity,
+                height: 70,
+              ),
+            ],
+          ),
+          Center(
+            child: Positioned(
+              child: Column(
+                children: [
+                  SizedBox(height: 140),
+                  ImageProfile('assets/images/my_photo.jpg', 120),
+                ],
               ),
             ),
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-              'Eber Ed | Diseñador UI/UX | Developer',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey,
+          ),
+        ]),
+        Text(
+          'Eber Ed',
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+        SizedBox(
+          height: 8,
+        ),
+        Text(
+          'Eber Ed | Diseñador UI/UX | Developer',
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.grey,
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+      ],
+    ));
+    final Widget buttons = Container(
+      margin: EdgeInsets.symmetric(horizontal: 27),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ConstrainedBox(
+            constraints: BoxConstraints.tightFor(width: 143, height: 43),
+            child: ElevatedButton.icon(
+                icon: Icon(Icons.messenger_outline_rounded),
+                onPressed: () {},
+                label: Text('Mensaje'),
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xff1977F3),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(26.0),
+                  ),
+                )),
+          ),
+          ConstrainedBox(
+            constraints: BoxConstraints.tightFor(width: 143, height: 43),
+            child: OutlinedButton(
+              onPressed: () {},
+              child: Text('Llamar'),
+              style: OutlinedButton.styleFrom(
+                primary: Color(0xff1977F3),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(26.0),
+                  side: BorderSide(color: Colors.blue),
+                ),
               ),
             ),
-            SizedBox(
-              height: 10,
+          ),
+          Ink(
+            decoration: ShapeDecoration(
+              color: Color(0xff1977F3),
+              shape: CircleBorder(),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: 143, height: 43),
-                  child: ElevatedButton.icon(
-                      icon: Icon(Icons.messenger_outline_rounded),
-                      onPressed: () {},
-                      label: Text('Mensaje'),
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xff1977F3),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(26.0),
-                        ),
-                      )),
-                ),
-                ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: 143, height: 43),
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: Text('Llamar'),
-                    style: OutlinedButton.styleFrom(
-                      primary: Color(0xff1977F3),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26.0),
-                        side: BorderSide(color: Colors.blue),
-                      ),
-                    ),
-                  ),
-                ),
-                Ink(
-                  decoration: ShapeDecoration(
-                    color: Color(0xff1977F3),
-                    shape: CircleBorder(),
-                  ),
-                  child: IconButton(
-                    icon: Icon(Icons.more_horiz_rounded),
-                    color: Colors.white,
-                    onPressed: () {},
-                  ),
-                ),
-              ],
+            child: IconButton(
+              icon: Icon(Icons.more_horiz_rounded),
+              color: Colors.white,
+              onPressed: () {},
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
     final Widget info = Container(
       margin: EdgeInsets.symmetric(horizontal: 27),
       child: Column(
@@ -172,6 +199,7 @@ class Profile extends StatelessWidget {
       body: Column(
         children: [
           header,
+          buttons,
           Divider(
             color: Colors.grey,
             thickness: 0.45,
