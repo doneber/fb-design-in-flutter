@@ -155,9 +155,21 @@ class Profile extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 27),
       child: Row(
         children: [
-          Story(),
-          Story(),
-          Story(),
+          Story(
+            'Colección',
+            'https://picsum.photos/209',
+            showMiniPhoto: false,
+          ),
+          Story(
+            'Colección',
+            'https://picsum.photos/210',
+            showMiniPhoto: false,
+          ),
+          Story(
+            'Colección',
+            'https://picsum.photos/211',
+            showMiniPhoto: false,
+          ),
         ],
       ),
     );

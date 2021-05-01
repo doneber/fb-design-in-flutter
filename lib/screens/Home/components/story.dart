@@ -2,6 +2,10 @@ import 'package:fb_design/screens/widgets/image_profile.dart';
 import 'package:flutter/material.dart';
 
 class Story extends StatelessWidget {
+  final String title;
+  final String photoUrl;
+  final bool showMiniPhoto;
+  Story(this.title, this.photoUrl, {this.showMiniPhoto = true});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,20 +21,21 @@ class Story extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/45@2x.png'),
+                    image: NetworkImage(this.photoUrl),
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 0,
-                left: 30,
-                child: ImageProfile('assets/images/45.png', 25),
-              )
+              if (this.showMiniPhoto)
+                Positioned(
+                  bottom: 0,
+                  left: 30,
+                  child: ImageProfile(this.photoUrl, 25),
+                )
             ],
           ),
         ),
         Text(
-          'Title',
+          this.title,
           style: TextStyle(
             color: Colors.grey,
           ),
