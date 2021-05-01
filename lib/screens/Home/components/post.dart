@@ -22,8 +22,11 @@ class Post extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PostHeader(),
-          Text(
-            'Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.',
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 6),
+            child: Text(
+              'Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.',
+            ),
           ),
           Card(
             margin: EdgeInsets.only(bottom: 10, top: 10),

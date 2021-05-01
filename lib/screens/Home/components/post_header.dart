@@ -19,10 +19,24 @@ class PostHeader extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
-                'Hace 3 dias',
-                style: TextStyle(color: Colors.grey),
-                textAlign: TextAlign.start,
+              SizedBox(height: 5),
+              Row(
+                children: [
+                  Icon(
+                    Icons.public,
+                    color: Colors.grey,
+                    size: 12,
+                  ),
+                  SizedBox(width: 6),
+                  Text(
+                    'Hace 3 dias',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 11,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
               )
             ],
           ),
