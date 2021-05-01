@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class BasicIcon extends StatelessWidget {
   final typeIcon;
   final sizeIcon;
-  BasicIcon(this.typeIcon, this.sizeIcon);
+  final color;
+  BasicIcon(this.typeIcon, this.sizeIcon, {this.color = 0xff2a303a});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class BasicIcon extends StatelessWidget {
         size: this.sizeIcon,
       ),
       decoration: BoxDecoration(
-        color: Color(0xff2a303a),
+        color: Color(this.color),
         borderRadius: BorderRadius.circular(100),
       ),
     );

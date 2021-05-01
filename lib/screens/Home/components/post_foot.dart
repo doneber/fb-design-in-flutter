@@ -14,11 +14,12 @@ class PostFoot extends StatelessWidget {
         ),
         Row(
           children: [
-            BasicIcon(Icons.thumb_up,18),
+            BasicIcon(Icons.thumb_up, 18, color: 0xff1C2027),
             SizedBox(width: 10),
-            BasicIcon(Icons.messenger_rounded,18),
+            BasicIcon(Icons.messenger_rounded, 18, color: 0xff1C2027),
             SizedBox(width: 10),
-            BasicIcon(Icons.subdirectory_arrow_right_rounded,18),
+            BasicIcon(Icons.subdirectory_arrow_right_rounded, 18,
+                color: 0xff1C2027),
             Spacer(),
             Text(
               'Mao Lop y 50 personas',
@@ -33,7 +34,10 @@ class PostFoot extends StatelessWidget {
             ),
           ],
         ),
-        Divider(color: Colors.grey, thickness: 0.22,),
+        Divider(
+          color: Colors.grey,
+          thickness: 0.22,
+        ),
       ],
     );
   }
