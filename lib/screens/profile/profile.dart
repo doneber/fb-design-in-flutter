@@ -178,6 +178,7 @@ class Profile extends StatelessWidget {
       Friend('Elvis Cocho', 'https://picsum.photos/202'),
       Friend('Itela Creiste', 'https://picsum.photos/203'),
       Friend('Esteban Quito', 'https://picsum.photos/204'),
+      Friend('Jhony Bravo', 'https://picsum.photos/205'),
     ];
     final Widget friendsWidget = Container(
       margin: EdgeInsets.symmetric(horizontal: 27),
@@ -208,44 +209,50 @@ class Profile extends StatelessWidget {
             ],
           ),
           SizedBox(height: 14),
-          Row(
-            children: <Widget>[
-              for (final friend in friends)
-                Container(
-                  margin: EdgeInsets.all(7),
-                  child: Column(
-                    children: [
-                      ImageProfile(friend.photoUrl, 65),
-                      SizedBox(height: 5),
-                      Text(
-                        friend.name,
-                        style: TextStyle(color: Colors.grey),
-                      )
-                    ],
-                  ),
-                ),
-            ],
+          Container(
+            height: 140,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                for (final friend in friends)
+                  Container(
+                    margin: EdgeInsets.all(7),
+                    child: Column(
+                      children: [
+                        ImageProfile(friend.photoUrl, 65),
+                        SizedBox(height: 5),
+                        Text(
+                          friend.name,
+                          style: TextStyle(color: Colors.grey),
+                        )
+                      ],
+                    ),
+                  )
+              ],
+            ),
           )
         ],
       ),
     );
     return Scaffold(
-      body: Column(
-        children: [
-          header,
-          buttons,
-          Divider(
-            color: Colors.grey,
-            thickness: 0.45,
-          ),
-          info,
-          storiesOrSomethingLike,
-          Divider(
-            color: Colors.grey,
-            thickness: 0.45,
-          ),
-          friendsWidget,
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            header,
+            buttons,
+            Divider(
+              color: Colors.grey,
+              thickness: 0.45,
+            ),
+            info,
+            storiesOrSomethingLike,
+            Divider(
+              color: Colors.grey,
+              thickness: 0.45,
+            ),
+            friendsWidget,
+          ],
+        ),
       ),
     );
   }
