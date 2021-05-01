@@ -6,12 +6,15 @@ class StoriesContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 20, top: 9, bottom: 9),
-      child: Row(
+      height: 140,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
         children: [
           Story('Crear historia', 'assets/images/my_photo.jpg'),
           Story('Fernanda', 'https://picsum.photos/205'),
           Story('James', 'https://picsum.photos/206'),
           Story('Estefania', 'https://picsum.photos/207'),
+          Story('Fernanda', 'https://picsum.photos/205'),
         ],
       ),
     );
