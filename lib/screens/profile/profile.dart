@@ -74,24 +74,28 @@ class Profile extends StatelessWidget {
                   ),
                 )),
           ),
-          ConstrainedBox(
-            constraints: BoxConstraints.tightFor(width: 143, height: 43),
-            child: OutlinedButton(
-              onPressed: () {},
-              child: Text('Llamar'),
-              style: OutlinedButton.styleFrom(
-                primary: Color(0xff1977F3),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(26.0),
-                  side: BorderSide(color: Colors.blue),
+          Ink(
+            decoration: BoxDecoration(
+              border: Border.all(color: Color(0xff1977F3), width: 2.0),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            width: 120,
+            height: 43,
+            child: InkWell(
+              onTap: null,
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Text('Llamar'),
+                style: OutlinedButton.styleFrom(
+                  primary: Color(0xff1977F3),
                 ),
               ),
             ),
           ),
           Ink(
-            decoration: ShapeDecoration(
-              color: Color(0xff1977F3),
-              shape: CircleBorder(),
+            decoration: BoxDecoration(
+              border: Border.all(color: Color(0xff222833), width: 2.0),
+              borderRadius: BorderRadius.circular(25),
             ),
             child: IconButton(
               icon: Icon(Icons.more_horiz_rounded),
