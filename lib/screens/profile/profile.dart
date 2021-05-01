@@ -1,3 +1,4 @@
+import 'package:fb_design/Models/Friend.dart';
 import 'package:fb_design/screens/Home/components/story.dart';
 import 'package:fb_design/screens/widgets/image_profile.dart';
 import 'package:flutter/material.dart';
@@ -160,14 +161,20 @@ class Profile extends StatelessWidget {
         ],
       ),
     );
-    final Widget friends = Container(
+    var friends = [
+      Friend('Jose Noel', 'https://picsum.photos/201'),
+      Friend('Elvis Cocho', 'https://picsum.photos/202'),
+      Friend('Itela Creiste', 'https://picsum.photos/203'),
+      Friend('Esteban Quito', 'https://picsum.photos/204'),
+    ];
+    final Widget friendsWidget = Container(
       margin: EdgeInsets.symmetric(horizontal: 27),
       child: Column(
         children: [
           Row(
             children: [
               Text(
-                'Amigos',
+                'Amigos ',
                 style: TextStyle(
                   fontSize: 22,
                 ),
@@ -188,14 +195,25 @@ class Profile extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(height: 14),
           Row(
-            children: [
-              ImageProfile('assets/images/my_photo.jpg', 65),
-              ImageProfile('assets/images/45.png', 65),
-              ImageProfile('assets/images/45.png', 65),
-              ImageProfile('assets/images/45.png', 65),
+            children: <Widget>[
+              for (final friend in friends)
+                Container(
+                  margin: EdgeInsets.all(7),
+                  child: Column(
+                    children: [
+                      ImageProfile(friend.photoUrl, 65),
+                      SizedBox(height: 5),
+                      Text(
+                        friend.name,
+                        style: TextStyle(color: Colors.grey),
+                      )
+                    ],
+                  ),
+                ),
             ],
-          ),
+          )
         ],
       ),
     );
@@ -214,7 +232,7 @@ class Profile extends StatelessWidget {
             color: Colors.grey,
             thickness: 0.45,
           ),
-          friends,
+          friendsWidget,
         ],
       ),
     );

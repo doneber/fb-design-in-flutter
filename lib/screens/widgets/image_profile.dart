@@ -18,7 +18,7 @@ class ImageProfile extends StatelessWidget {
         color: Colors.blueGrey,
         borderRadius: BorderRadius.circular(100),
         image: DecorationImage(
-          image: AssetImage(
+          image: NetworkImage(
             this.srcImage,
           ),
         ),
